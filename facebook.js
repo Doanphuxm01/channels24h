@@ -45,10 +45,10 @@ function Facebook(accessToken, groupId)
         let formPublish = new FormData();
         let date = moment().format('dddd').toUpperCase() + ' NGÀY '+ moment().format('LL').toUpperCase();
         formPublish.append('message',
-            `# TIN TỨC BUỔI TRƯAa ${date}\n` +
+            `# TIN TỨC  ${date}\n` +
             '\n' +
             '## thông tin\n' +
-            '* Bài viết được tự động đăng lúc 12 giờ trưa hàng ngày\n' +
+            '* Bài viết mới nhất trong ngày\n' +
             '* Các bạn like FanPage để nhận được thông tin nóng hằng ngày nhé');
         formPublish.append('formatting', 'MARKDOWN');
 
