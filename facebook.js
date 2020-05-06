@@ -45,7 +45,7 @@ function Facebook(accessToken, groupId)
         let formPublish = new FormData();
         let date = moment().format('dddd').toUpperCase() + ' NGÀY '+ moment().format('LL').toUpperCase();
         formPublish.append('message',
-            `# TIN TỨC BUỔI TRƯA ${date}\n` +
+            `# TIN TỨC BUỔI TRƯAa ${date}\n` +
             '\n' +
             '## thông tin\n' +
             '* Bài viết được tự động đăng lúc 12 giờ trưa hàng ngày\n' +
@@ -56,10 +56,6 @@ function Facebook(accessToken, groupId)
             let responseId = await publishImage(images[i]);
             formPublish.append(`attached_media[${i}]`, `{"media_fbid":"${responseId}"}`);
         }
-        // let lastImageId = await publishImage('https://source.unsplash.com/daily?girl', true);
-        // formPublish.append(`attached_media[${images.length}]`, `{"media_fbid":"${lastImageId}"}`);
-
-
         let response = await fetch(`${facebookApiV6}/${groupId}/feed?access_token=`+accessToken, {
             method: 'POST',
             body: formPublish,
