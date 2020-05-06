@@ -6,8 +6,8 @@
     "facebook",
     "canvas"
   ],
-  "website": "https://lerni.dev",
-  "repository": "https://github.com/namttdh/lerni-fb-bot-news",
+  "website": "https://github.com/Doanphuxm01/channels24h",
+  "repository": "https://github.com/Doanphuxm01/channels24h",
   "success_url": "/welcome",
   "env": {
     "ACCESS_TOKEN": {
